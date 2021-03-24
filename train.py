@@ -8,7 +8,7 @@ def train(args):
     epoch = 0
     itr = 0
     model = torch.zeros(5)
-
+    print('test')
     checkpoint_path = os.path.join(args.save_dir, 'checkpoint_last.pt')
     if os.path.exists(checkpoint_path):
         state_dict = torch.load(checkpoint_path)

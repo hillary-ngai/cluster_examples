@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=example_job
-#SBATCH --output=/output/%j.out
-#SBATCH --error=/output/%j.err
+#SBATCH --output=/h/hngai/output/%j.out
+#SBATCH --error=/h/hngai/output/%j.err
 #SBATCH --open-mode=append
 #SBATCH --partition=gpu
 #SBATCH --cpus-per-task=4
