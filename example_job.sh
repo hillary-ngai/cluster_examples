@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # set up environment
-. ~/path/to/my/environment/activate
+. ~/med-dialogue-system/env/bin/activate
 
 # symlink checkpoint directory to run directory
-ln -s /checkpoint/$USER/$SLURM_JOB_ID /path/to/my/save/dir
+ln -s /checkpoint/$USER/$SLURM_JOB_ID /output
 
 python3 train.py
