@@ -3,8 +3,8 @@ import argparse
 import os
 import time
 
-def train(args):
 
+def train(args):
     epoch = 0
     itr = 0
     model = torch.zeros(5)
@@ -35,10 +35,10 @@ def train(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dropout', type=float)
-    parser.add_argument('--lr', type=float)
-    parser.add_argument('--max-epoch', type=int)
-    parser.add_argument('--max-itr', type=int)
-    parser.add_argument('--save-dir', type=str)
+    parser.add_argument('--dropout', type=float, default=0.1)
+    parser.add_argument('--lr', type=float, default=2e-5)
+    parser.add_argument('--max-epoch', type=int, default=10)
+    parser.add_argument('--max-itr', type=int, default=100)
+    parser.add_argument('--save-dir', type=str, default="output")
     args = parser.parse_args()
     train(args)
